@@ -1,1 +1,9 @@
 en:
+  shared:
+    log_in: Log In
+    log_out: Log Out
+    profile: Profile
+    admin_panel: Admin Panel
+
+  explanations:
+    log_in: Log in to access the billboard management system

@@ -1,0 +1,36 @@
+.devise {
+  padding-top: 100px;
+
+  .card {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px;
+  }
+
+  h2 {
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #444444;
+  }
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+  }
+
+  p.alert {
+    color: red;
+  }
+
+  .btn {
+    opacity: 0.85;
+  }
+
+  .btn:hover {
+    opacity: 1;
+    color: white;
+  }
+ }

@@ -24,6 +24,7 @@ gem 'aws-sdk-s3', require: false
 group :development do
   gem 'better_errors'
   gem 'annotate'
+  gem 'foreman'
 
   gem 'byebug'
   gem 'web-console', '>= 3.3.0'
