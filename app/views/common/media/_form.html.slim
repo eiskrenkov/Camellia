@@ -1,0 +1,6 @@
+= simple_form_for resource, url: default_resource_update_path do |media_form|
+  = media_form.input :name
+  = media_form.input :file, as: :file, wrapper: :custom_file, hint: t('explanations.media_file')
+
+  = cancel_button
+  .pull-right = save_button

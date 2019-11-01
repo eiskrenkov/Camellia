@@ -1,0 +1,14 @@
+= table_tag
+  thead
+    tr
+      th = resource_class.human_attribute_name(:id)
+      th = resource_class.human_attribute_name(:name)
+      th = t('shared.actions')
+  tbody
+    - collection.each do |media|
+      tr
+        td = media.id
+        td = media.name
+        td.inline-btn-toolbar
+          = edit_button media
+          = delete_button media, data: { confirm: t('confirmations.deletion') }

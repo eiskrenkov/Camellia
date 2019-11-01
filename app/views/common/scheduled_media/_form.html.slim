@@ -1,0 +1,5 @@
+.form-group.row.nested-fields
+  = f.input :schedule_id, as: :hidden, input_html: { value: resource.id }
+
+  .col = f.input :times_per_hour
+  .col = f.input :media_id, collection: Media.pluck(:name, :id)

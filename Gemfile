@@ -8,7 +8,6 @@ gem 'rails', '~> 6.0.0'
 gem 'puma', '~> 3.11'
 gem 'mysql2', '>= 0.4.4'
 gem 'devise'
-gem 'simple_form'
 gem 'enumerate_it'
 gem 'inherited_resources'
 
@@ -16,6 +15,8 @@ gem 'inherited_resources'
 gem 'webpacker', '~> 4.0'
 gem 'sass-rails', '~> 5'
 gem 'slim-rails'
+gem 'cocoon'
+gem 'simple_form'
 
 # Others
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -23,7 +24,7 @@ gem 'aws-sdk-s3', require: false
 
 group :development do
   gem 'better_errors'
-  gem 'annotate'
+  gem 'annotate', '~> 2.7.5'
   gem 'foreman'
 
   gem 'byebug'

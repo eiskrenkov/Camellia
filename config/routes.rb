@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   namespace :common do
     resources :dashboard, only: %i[index]
 
-    resources :media, only: %i[index]
-    resources :schedules, only: %i[index]
-    resources :devices, only: %i[index]
+    resources :media
+    resources :schedules
+    resources :devices
 
     root to: 'dashboard#index'
   end

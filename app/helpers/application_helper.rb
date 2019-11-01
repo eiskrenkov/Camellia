@@ -15,4 +15,8 @@ module ApplicationHelper
 
     class_list.uniq.join(' ')
   end
+
+  def default_resource_update_path
+    resource.new_record? ? collection_path : resource_path
+  end
 end

@@ -4,6 +4,13 @@ en:
     log_out: Log Out
     profile: Profile
     admin_panel: Admin Panel
+    actions: Actions
+    save: Save
+    cancel: Cancel
 
   explanations:
     log_in: Log in to access the billboard management system
+    media_file: File will be uploaded to the remote server
+
+  confirmations:
+    deletion: Do you really want to delete this item?

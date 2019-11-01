@@ -1,0 +1,15 @@
+= table_tag
+  thead
+    tr
+      th = resource_class.human_attribute_name(:id)
+      th = resource_class.human_attribute_name(:name)
+      th = t('shared.actions')
+  tbody
+    - collection.each do |schedule|
+      tr
+        td = schedule.id
+        td = schedule.name
+        td.inline-btn-toolbar
+          = edit_button schedule
+          = export_button schedule
+          = delete_button schedule, data: { confirm: t('confirmations.deletion') }
