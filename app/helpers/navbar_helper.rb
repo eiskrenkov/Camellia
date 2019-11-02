@@ -5,6 +5,17 @@ module NavbarHelper
     end
   end
 
+  def navbar_collapse_button
+    bootstrap_icon_button(
+      '', 'bars', class: 'navbar-toggler', data: { toggle: 'collapse', target: '#collapse-content' },
+                  aria: { controls: 'collapse-content', expanded: false, label: 'toggle' }
+    )
+  end
+
+  def navbar_collapse_section(&block)
+    content_tag(:div, capture(&block), class: 'collapse navbar-collapse', id: 'collapse-content')
+  end
+
   def navbar_brand
     link_to(application_name, root_path, class: 'navbar-brand')
   end
