@@ -7,6 +7,23 @@ en:
     actions: Actions
     save: Save
     cancel: Cancel
+    create: Create
+
+  common:
+    dashboard:
+      greetings: Signed in as %{email}
+      devices_stats: Currently you own %{devices_amount} devices, %{enabled_devices_amount} of them are enabled
+      media_stats:
+        header: Media statistics
+
+  admin:
+    dashboard:
+      export: Export device owners log
+      common_actions: Common Actions
+      create_device_owner: Create Device Owner
+      users_grid: Existings Device Owners
+    users:
+      devices_grid: Devices owned by %{username}
 
   explanations:
     log_in: Log in to access the billboard management system

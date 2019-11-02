@@ -3,7 +3,7 @@ Media.destroy_all
 Schedule.destroy_all
 
 rand(10..30).times do
-  Device.create(name: SecureRandom.uuid.split('-').first, status: DeviceStatus.list.sample)
+  Device.create(name: SecureRandom.uuid.split('-').first, status: DeviceStatus.list.sample, user_id: User.last.id)
 end
 
 rand(10..30).times do

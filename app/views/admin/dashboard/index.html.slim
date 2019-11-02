@@ -1,0 +1,23 @@
+.row
+  .col-sm-6
+    .card
+      h5.card-header = t('admin.dashboard.common_actions')
+      .card-body
+        = bootstrap_button t('admin.dashboard.export'), url: root_path, class: 'btn-block'
+
+  .col-sm-6
+    .card
+      h5.card-header = t('admin.dashboard.create_device_owner')
+      .card-body
+        = simple_form_for current_user, url: root_path do |f|
+          = f.input :email
+          = f.input :password
+
+        = bootstrap_button t('shared.create'), type: :submit, class: 'btn-block'
+
+br
+
+.card
+  h5.card-header = t('admin.dashboard.users_grid')
+
+  = render 'admin/users/grid'

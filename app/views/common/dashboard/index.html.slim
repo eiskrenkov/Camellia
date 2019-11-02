@@ -1,0 +1,15 @@
+.card
+  h5.card-header Dashboard
+
+  .card-body
+    h5.card-title = dashdoard_greeting
+    p.card-text = dashboard_statistics
+
+    = bootstrap_icon_button 'Add Device', 'plus', url: new_common_device_path, class: 'btn-success'
+
+br
+
+.card
+  h5.card-header = t('common.dashboard.media_stats.header')
+  = render 'media_grid'
+

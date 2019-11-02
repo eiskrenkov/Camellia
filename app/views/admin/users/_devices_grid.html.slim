@@ -1,0 +1,16 @@
+= table_tag
+  thead
+    tr
+      th = resource_class.human_attribute_name(:id)
+      th = resource_class.human_attribute_name(:name)
+      th = resource_class.human_attribute_name(:status)
+      th = t('shared.actions')
+  tbody
+    - resource.devices.each do |device|
+      tr
+        td = device.id
+        td = device.name
+        td = device_status_badge device
+        td.inline-btn-toolbar
+          = edit_button device, url: edit_common_device_path(device)
+          = delete_button device, url: common_device_path(device), method: :delete

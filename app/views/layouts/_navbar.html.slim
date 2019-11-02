@@ -9,6 +9,10 @@
       = navbar_link 'Schedules', common_schedules_path, section: :schedules
       = navbar_link 'Devices', common_devices_path, section: :devices
 
+    - if user_is_admin?
+      = navbar_links_set position: :right
+        = navbar_link 'Admin Panel', admin_dashboard_index_path, section: :admin_dashboard
+
     - if user_signed_in?
       = navbar_links_set position: :right
         = navbar_authentication_dropdown

@@ -1,0 +1,8 @@
+= table_tag
+  tbody
+    - collection.each do |user|
+      tr
+        td = user.id
+        td = user.email
+        td.inline-btn-toolbar
+          = edit_button user, url: url_for([:edit, :admin, user])

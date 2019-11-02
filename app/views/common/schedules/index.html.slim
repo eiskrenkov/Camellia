@@ -3,6 +3,7 @@
     .pull-right
       .inline-btn-toolbar
         = import_button size: :sm
-        = new_button size: :sm
+        / TODO: Replace with actual new button
+        = new_button size: :sm, url: root_path
 
   = render 'grid'

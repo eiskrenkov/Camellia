@@ -1,0 +1,6 @@
+= table_tag
+  tbody
+    - Media.all.each do |media|
+      tr
+        td = media.name
+        td = "Viewed #{rand(100..999)} times"

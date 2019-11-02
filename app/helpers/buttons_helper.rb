@@ -47,7 +47,7 @@ module ButtonsHelper
     data_attributes = options.delete(:data) || {}
     default_options = {
       method: :delete,
-      data: data_attributes.reverse_merge(confirm: t('shared.confirmation')),
+      data: data_attributes.reverse_merge(confirm: t('confirmations.deletion')),
       class: 'btn-danger',
       size: :xs
     }

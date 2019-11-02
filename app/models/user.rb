@@ -15,5 +15,6 @@ class User < ApplicationRecord
 
   alias_attribute :is_admin?, :admin
 
+  has_many :devices, class_name: 'Device', dependent: :destroy
   has_many :schedules, class_name: 'Schedule', dependent: :destroy
 end
