@@ -1,4 +1,4 @@
-module Common::DashboardHelper
+module DashboardHelper
   def dashdoard_greeting
     t('common.dashboard.greetings', email: current_user.email)
   end

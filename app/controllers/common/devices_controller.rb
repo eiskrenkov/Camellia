@@ -20,6 +20,6 @@ class Common::DevicesController < AuthenticatedController
   private
 
   def permitted_params
-    params.permit(device: %i[name])
+    params.permit(device: %w[name schedule_id])
   end
 end
