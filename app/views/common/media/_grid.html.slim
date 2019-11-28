@@ -7,7 +7,7 @@
   tbody
     - collection.each do |media|
       tr
-        td = media.id
+        td = link_to media.id, edit_resource_path(media)
         td = media.name
         td.inline-btn-toolbar
           = edit_button media

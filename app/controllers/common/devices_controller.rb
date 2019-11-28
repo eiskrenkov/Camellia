@@ -19,7 +19,7 @@ class Common::DevicesController < AuthenticatedController
 
   private
 
-  def permitted_params
-    params.permit(device: %w[name schedule_id])
+  def device_params
+    params.require(:device).permit(:name, :internal_name, :schedule_id, :user_id)
   end
 end

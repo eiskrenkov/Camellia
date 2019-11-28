@@ -1,5 +1,7 @@
 .form-group.row.nested-fields
   = f.input :schedule_id, as: :hidden, input_html: { value: resource.id }
 
-  .col = f.input :times_per_hour
-  .col = f.input :media_id, collection: Media.pluck(:name, :id)
+  .col-sm-2 = f.input :times_per_hour, label: false
+  .col-sm-9 = f.input :media_id, collection: Media.pluck(:name, :id), label: false
+
+  .col-sm-1 = remove_association_button f

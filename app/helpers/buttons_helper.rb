@@ -97,4 +97,12 @@ module ButtonsHelper
 
     bootstrap_icon_button('Import', 'file-import', default_options.merge(options))
   end
+
+  def remove_association_button(form, options = {})
+    default_options = {
+      class: 'btn btn-danger'
+    }
+
+    link_to_remove_association fa_icon('trash'), form, default_options.merge!(options)
+  end
 end

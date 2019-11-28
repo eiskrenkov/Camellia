@@ -1,6 +1,13 @@
 = simple_form_for resource, url: default_resource_update_path do |schedule_form|
   = schedule_form.input :name
 
+  .row
+    .col-sm-2 = resource_class.human_attribute_name(:times_per_hour)
+    .col-sm-9 = resource_class.human_attribute_name(:media_id)
+    .sol-sm-1
+
+  hr
+
   = schedule_form.simple_fields_for :scheduled_media do |scheduled_media_form|
     = render 'common/scheduled_media/form', f: scheduled_media_form
   .links

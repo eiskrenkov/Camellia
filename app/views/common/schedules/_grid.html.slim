@@ -7,7 +7,7 @@
   tbody
     - collection.each do |schedule|
       tr
-        td = schedule.id
+        td = link_to schedule.id, edit_resource_path(schedule)
         td = schedule.name
         td.inline-btn-toolbar
           = edit_button schedule

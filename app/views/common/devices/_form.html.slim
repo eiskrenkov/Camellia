@@ -1,6 +1,9 @@
 = simple_form_for resource, url: default_resource_update_path do |device_form|
   = device_form.input :name
+  = device_form.input :internal_name
   = device_form.input :schedule_id, collection: current_user.schedules.pluck(:name, :id)
+
+  = device_form.input :user_id, as: :hidden, input_htmml: { value: current_user.id }
 
   = cancel_button
   .pull-right = save_button

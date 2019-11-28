@@ -13,7 +13,7 @@ class Common::MediaController < AuthenticatedController
 
   private
 
-  def permitted_params
-    params.permit(media: %w[name file])
+  def media_params
+    params.require(:media).permit(:name, :file)
   end
 end

@@ -20,7 +20,7 @@ class Common::SchedulesController < AuthenticatedController
 
   private
 
-  def permitted_params
+  def schedule_params
     params.require(:schedule).permit(
       :name, scheduled_media_attributes: %i[id times_per_hour media_id schedule_id]
     )
