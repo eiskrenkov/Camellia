@@ -44,6 +44,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'railroady'
+
   gem 'pry-rails'
   gem 'pry-byebug'
 
