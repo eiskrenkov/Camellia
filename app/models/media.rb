@@ -12,14 +12,16 @@ class Media < ApplicationRecord
   has_one_attached :file
   has_many :scheduled_media, dependent: :restrict_with_error, inverse_of: :media
 
-  # TODO: Add uploaded file presence validation
   validates :name, presence: true
+  validates :file, attached: true
 
-  before_save :fetch_file_name
+  before_save :populate_file_name
+
+  default_scope { order(created_at: :desc) }
 
   private
 
-  def fetch_file_name
+  def populate_file_name
     self.name = image.filename.base if name.blank?
   end
 end

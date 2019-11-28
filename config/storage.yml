@@ -1,7 +1,11 @@
-test:
-  service: Disk
-  root: <%= Rails.root.join("tmp/storage") %>
-
 local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
+
+digitalocean:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.dig(:digitalocean, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:digitalocean, :secret_access_key) %>
+  region: fra1
+  bucket: camellia-media
+  endpoint: https://fra1.digitaloceanspaces.com

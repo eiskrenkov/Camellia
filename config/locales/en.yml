@@ -1,4 +1,9 @@
 en:
+  activerecord:
+    errors:
+      messages:
+        attached: is not attached
+
   shared:
     log_in: Log In
     log_out: Log Out
