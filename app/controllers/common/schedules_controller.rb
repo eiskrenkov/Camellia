@@ -8,8 +8,7 @@ class Common::SchedulesController < AuthenticatedController
   end
 
   def update
-    resource.update(permitted_params)
-    redirect_to collection_path
+    update! { collection_path }
   end
 
   protected
@@ -22,7 +21,7 @@ class Common::SchedulesController < AuthenticatedController
 
   def schedule_params
     params.require(:schedule).permit(
-      :name, scheduled_media_attributes: %i[id times_per_hour media_id schedule_id]
+      :name, scheduled_media_attributes: %i[id times_per_hour media_id schedule_id _destroy]
     )
   end
 end

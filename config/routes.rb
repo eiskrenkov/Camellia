@@ -16,5 +16,11 @@ Rails.application.routes.draw do
     resources :users, only: :edit
   end
 
+  namespace :api do
+    resources :devices, only: [] do
+      get :schedule, on: :collection
+    end
+  end
+
   root to: redirect('/common')
 end
