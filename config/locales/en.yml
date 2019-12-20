@@ -27,6 +27,9 @@ en:
       common_actions: Common Actions
       create_device_owner: Create Device Owner
       users_grid: Existings Device Owners
+      amount_of_users: 'Users: %{amount}'
+      amount_of_devices: 'Devices: %{amount}'
+      amount_of_media: 'Media: %{amount}'
     users:
       devices_grid: Devices owned by %{username}
 
