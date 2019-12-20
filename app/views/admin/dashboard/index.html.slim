@@ -16,11 +16,10 @@ br
     .card
       h5.card-header = t('admin.dashboard.create_device_owner')
       .card-body
-        = simple_form_for current_user, url: root_path do |f|
+        = simple_form_for current_user, url: admin_users_path, method: :post do |f|
           = f.input :email
           = f.input :password
-
-        = bootstrap_button t('shared.create'), type: :submit, class: 'btn-block'
+          = bootstrap_button t('shared.create'), type: :submit, class: 'btn-block'
 
 br
 

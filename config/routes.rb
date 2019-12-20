@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :dashboard, only: :index
-    resources :users, only: :edit
+    resources :users, only: :edit do
+      post :create, on: :collection
+    end
   end
 
   namespace :api do
