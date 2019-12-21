@@ -1,0 +1,19 @@
+= bootstrap_resource_card
+  br
+
+  = table_tag
+    thead
+      tr
+        th Changed Attribute
+        th Old Value
+        th New Value
+    tbody
+    - resource.change_set.each_pair do |key, value|
+      tr
+        td = resource.changed_object.class.human_attribute_name(key)
+        td = value.first
+        td = value.second
+
+  br
+
+  = cancel_button class: 'btn-block'

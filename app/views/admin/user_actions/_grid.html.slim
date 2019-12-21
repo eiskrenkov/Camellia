@@ -1,0 +1,11 @@
+= table_tag
+  tbody
+    - collection.each do |user_action|
+      tr
+        td = user_action.author
+        td = user_action_change_type_badge_for user_action
+        td = "#{user_action.human_changed_object_type} ##{user_action.changed_object_id}"
+        td = l user_action.created_at.localtime, format: :long
+        td
+          - unless user_action.changed_object_is_not_available?
+            = show_button user_action

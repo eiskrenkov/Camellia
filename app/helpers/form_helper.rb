@@ -1,7 +1,7 @@
 module FormHelper
-  def form_bootstrap_card(title, &block)
+  def bootstrap_resource_card(title = nil, &block)
     card_header = [
-      title.capitalize,
+      title&.capitalize,
       resource.class.name.demodulize,
       resource.id.presence
     ].join(' ')

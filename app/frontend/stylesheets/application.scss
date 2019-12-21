@@ -17,6 +17,11 @@ body {
 .card {
   .card-header {
     border-bottom: none;
+
+    h5 {
+      margin-bottom: 0px !important;
+      margin-top: 4px;
+    }
   }
 
   table {
@@ -40,4 +45,8 @@ body {
 .admin-stats {
   text-align: center;
   font-weight: 500;
+}
+
+.collection-filters {
+  margin: 0 5px 0 5px;
 }

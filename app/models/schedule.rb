@@ -10,6 +10,8 @@
 #
 
 class Schedule < ApplicationRecord
+  include UserActionsLoggable
+
   belongs_to :user, class_name: 'User'
   has_one :device, class_name: 'Device', dependent: :restrict_with_error
 

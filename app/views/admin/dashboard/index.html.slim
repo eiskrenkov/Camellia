@@ -10,13 +10,13 @@ br
     .card
       h5.card-header = t('admin.dashboard.common_actions')
       .card-body
-        = bootstrap_button t('admin.dashboard.export'), url: root_path, class: 'btn-block'
+        = bootstrap_button t('admin.dashboard.user_actions_log'), url: admin_user_actions_path, class: 'btn-block'
 
   .col-sm-6
     .card
       h5.card-header = t('admin.dashboard.create_device_owner')
       .card-body
-        = simple_form_for current_user, url: admin_users_path, method: :post do |f|
+        = simple_form_for User.new, url: admin_users_path, method: :post do |f|
           = f.input :email
           = f.input :password
           = bootstrap_button t('shared.create'), type: :submit, class: 'btn-block'

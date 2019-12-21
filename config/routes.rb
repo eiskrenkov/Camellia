@@ -13,8 +13,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :dashboard, only: :index
+
     resources :users, only: :edit do
       post :create, on: :collection
+    end
+
+    resources :user_actions do
+      get :export, on: :collection
     end
   end
 

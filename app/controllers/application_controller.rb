@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include UserIdentification
   include NavigationSupport
 
   inherit_resources

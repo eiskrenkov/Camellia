@@ -13,6 +13,13 @@ en:
     save: Save
     cancel: Cancel
     create: Create
+    export: Export
+    show: Show
+    import: Import
+    delete: Delete
+    edit: Edit
+    new: New
+    all: All
 
   common:
     dashboard:
@@ -23,15 +30,17 @@ en:
 
   admin:
     dashboard:
-      export: Export device owners log
       common_actions: Common Actions
       create_device_owner: Create Device Owner
-      users_grid: Existings Device Owners
-      amount_of_users: 'Users: %{amount}'
-      amount_of_devices: 'Devices: %{amount}'
-      amount_of_media: 'Media: %{amount}'
+      users_grid: Existing Device Owners
+      amount_of_users: 'Total Users: %{amount}'
+      amount_of_devices: 'Total Devices: %{amount}'
+      amount_of_media: 'Total Media: %{amount}'
+      user_actions_log: Device Owners actions log
     users:
       devices_grid: Devices owned by %{username}
+    user_actions:
+      grid_header: Devices Owners Actions
 
   explanations:
     log_in: Log in to access the billboard management system

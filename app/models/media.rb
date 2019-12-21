@@ -9,6 +9,8 @@
 #
 
 class Media < ApplicationRecord
+  include UserActionsLoggable
+
   has_one_attached :file
   has_many :scheduled_media, dependent: :restrict_with_error, inverse_of: :media
 

@@ -11,6 +11,10 @@
 #
 
 class User < ApplicationRecord
+  include ApplicationContextAccess
+
+  define_context_access :current_user
+
   devise :database_authenticatable, :validatable
 
   alias_attribute :is_admin?, :admin

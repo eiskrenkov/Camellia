@@ -11,5 +11,5 @@
         td = schedule.name
         td.inline-btn-toolbar
           = edit_button schedule
-          = export_button schedule
+          = export_button url: root_path
           = delete_button schedule, data: { confirm: t('confirmations.deletion') }

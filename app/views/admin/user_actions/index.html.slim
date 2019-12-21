@@ -1,0 +1,8 @@
+.card
+  .card-header
+    .pull-left
+      h5 = t('admin.user_actions.grid_header')
+    .pull-right
+      = collection_filters [t('shared.all'), *resource_class.pluck(:changed_object_type).uniq]
+      = export_button url: export_admin_user_actions_path(filter: params[:filter]), size: :sm, class: 'btn-secondary'
+  = render 'grid'
