@@ -7,6 +7,8 @@ class MediaPresenter < BasePresenter
   end
 
   def present
+    notice_presenting
+
     {
       name: media.name,
       file: present_file
@@ -22,5 +24,9 @@ class MediaPresenter < BasePresenter
       size: file.blob.byte_size,
       content_type: file.blob.content_type
     }
+  end
+
+  def notice_presenting
+    redis.incr("m:#{media.id}:p")
   end
 end
