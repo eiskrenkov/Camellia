@@ -3,4 +3,4 @@
     - Media.all.each do |media|
       tr
         td = media.name
-        td = "Viewed #{rand(100..999)} times"
+        td = "Requested #{media.present_count} times"

@@ -2,9 +2,9 @@ class Admin::UsersController < AdminController
   defaults resource_class: User
 
   def create
-    User.create!( 
-      email: user_params[:email], 
-      password: user_params[:password], 
+    User.create!(
+      email: user_params[:email],
+      password: user_params[:password],
       password_confirmation: user_params[:password]
     )
   end

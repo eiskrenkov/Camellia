@@ -7,6 +7,8 @@ class MediaPresenter < BasePresenter
   end
 
   def present
+    notice_presenting
+
     {
       name: media.name,
       file: present_file
@@ -14,6 +16,10 @@ class MediaPresenter < BasePresenter
   end
 
   private
+
+  def notice_presenting
+    media.increment!(:present_count) # rubocop:disable Rails/SkipsModelValidations
+  end
 
   def present_file
     {
